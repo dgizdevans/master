@@ -21,8 +21,7 @@ Prepare labeled data for training, validation, and testing the YOLOv8 model.
 
 ### Files
 
-https://github.com/Takosaga/ai_group_project/blob/main/notebooks/data_sorter_for_model.ipynb
-
+https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_model.ipynb
 ---
 
 ## **Step 2: Model Training**
@@ -42,8 +41,7 @@ Train YOLOv8 to detect three classes (V, C, S) using labeled data.
 - Trained model (`best.pt`) saved for further evaluation.
 
 ### Files
-https://github.com/Takosaga/ai_group_project/blob/main/notebooks/object_detection_yolov8_training.ipynb
-
+https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb
 ---
 
 ## **Step 3: Validation**
@@ -62,7 +60,7 @@ Validate the trained YOLOv8 model on the validation dataset to ensure generaliza
 Validation confirmed the model's ability to generalize, with **mAP@0.5 exceeding 80%** across classes.
 
 ### Files
-https://github.com/Takosaga/ai_group_project/blob/main/notebooks/object_detection_yolov8_training.ipynb
+https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb
 
 ---
 
@@ -98,15 +96,15 @@ https://github.com/Takosaga/ai_group_project/blob/main/notebooks/object_detectio
     - Class Distribution: S (443), V (3502), C (420)
 
 ### Files
-data prep: https://github.com/Takosaga/ai_group_project/blob/main/notebooks/data_sorter_for_unlabeled_data.ipynb
-main notebook: https://github.com/Takosaga/ai_group_project/blob/main/notebooks/yolov8_unlabeled_data_testing.ipynb
+data prep: https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_unlabeled_data.ipynb
+main notebook: https://github.com/dgizdevans/master/blob/main/ai_project/yolov8_unlabeled_data_testing.ipynb
 
 ---
 
 ### **Step 5: Visualization of Results**
 - Randomly selected 25 annotated images from different datasets.
 
-https://github.com/Takosaga/ai_group_project/blob/main/notebooks/unlabaled_images_annotation.ipynb
+https://github.com/dgizdevans/master/blob/main/ai_project/unlabaled_images_annotation.ipynb
 ---
 
 ### **Conclusion**
