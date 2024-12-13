@@ -1,4 +1,4 @@
-# **BD_project_v2: Analyzing E-commerce Product Data**
+# **Analyzing E-commerce Product Data**
 
 This repository contains the coursework project for the **Big Data Analytics and Applications** module. The project demonstrates how to leverage Google Cloud Platform (GCP) tools for processing, analyzing, and visualizing large datasets. The main focus is on analyzing the relationship between product image quality and customer ratings, while showcasing the practical application of cloud-based big data solutions.
 
