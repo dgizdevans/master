@@ -2,6 +2,11 @@
 
 ---
 
+## **Introduction**
+This report details the process and results of YOLOv8 model training, validation, and testing, along with the evaluation of augmented data to improve the model's performance. The goal is to compare the model trained with standard data to the one trained with augmented data for detecting three classes: **Passenger Vehicles (V)**, **Cargo Vehicles (C)**, and **Buses (S)**.
+
+---
+
 ## **Step 1: Data Preparation**
 ### Objective
 Prepare labeled data for training, validation, and testing the YOLOv8 model.
@@ -20,8 +25,8 @@ Prepare labeled data for training, validation, and testing the YOLOv8 model.
   - `images/` and `.txt` annotation files.
 
 ### Files
+[data_sorter_for_model.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_model.ipynb)
 
-https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_model.ipynb
 ---
 
 ## **Step 2: Model Training**
@@ -41,7 +46,8 @@ Train YOLOv8 to detect three classes (V, C, S) using labeled data.
 - Trained model (`best.pt`) saved for further evaluation.
 
 ### Files
-https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb
+[object_detection_yolov8_training.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb)
+
 ---
 
 ## **Step 3: Validation**
@@ -60,59 +66,80 @@ Validate the trained YOLOv8 model on the validation dataset to ensure generaliza
 Validation confirmed the model's ability to generalize, with **mAP@0.5 exceeding 80%** across classes.
 
 ### Files
-https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb
+[object_detection_yolov8_training.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/object_detection_yolov8_training.ipynb)
 
 ---
 
-### **Step 4: Testing on Unlabeled Data**
-- **Process:**
-  1. Loaded trained model from `models/yolov8_training/weights/best.pt`.
-  2. Ran predictions on `test_set_1` to `test_set_5`:
-      - Annotated images saved locally and to GCP.
-      - Predictions saved in `predictions.json` files for each dataset.
-  3. Calculated metrics:
-      - Average confidence, median confidence, and class distribution per dataset.
+## **Step 4: Testing on Unlabeled Data**
+### Objective
+Evaluate the trained YOLOv8 model on unlabeled datasets to assess its generalization capabilities.
 
-- **Metrics:**
-  - **Test Set 1:**
-    - Average Confidence: 0.8067
-    - Median Confidence: 0.8511
-    - Class Distribution: S (428), V (3564), C (438)
-  - **Test Set 2:**
-    - Average Confidence: 0.8095
-    - Median Confidence: 0.8569
-    - Class Distribution: S (419), V (3526), C (447)
-  - **Test Set 3:**
-    - Average Confidence: 0.8082
-    - Median Confidence: 0.8560
-    - Class Distribution: S (425), V (3455), C (434)
-  - **Test Set 4:**
-    - Average Confidence: 0.8087
-    - Median Confidence: 0.8579
-    - Class Distribution: S (430), V (3601), C (432)
-  - **Test Set 5:**
-    - Average Confidence: 0.8073
-    - Median Confidence: 0.8491
-    - Class Distribution: S (443), V (3502), C (420)
+### Process
+1. Loaded the trained model from `models/yolov8_training/weights/best.pt`.
+2. Ran predictions on unlabeled datasets (`test_set_1` to `test_set_5`).
+3. Calculated metrics such as average confidence, median confidence, and class distributions.
+
+### Results
+| **Test Set** | **Average Confidence** | **Median Confidence** | **Standard Deviation** |  
+|--------------|-------------------------|------------------------|-------------------------|  
+| Test Set 1   | 0.8067                 | 0.8511                | 0.1317                 |  
+| Test Set 2   | 0.8095                 | 0.8569                | 0.1301                 |  
+| Test Set 3   | 0.8082                 | 0.8560                | 0.1321                 |  
+| Test Set 4   | 0.8087                 | 0.8579                | 0.1323                 |  
+| Test Set 5   | 0.8073                 | 0.8491                | 0.1303                 |  
 
 ### Files
-data prep: https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_unlabeled_data.ipynb
-main notebook: https://github.com/dgizdevans/master/blob/main/ai_project/yolov8_unlabeled_data_testing.ipynb
+[data_sorter_for_unlabeled_data.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/data_sorter_for_unlabeled_data.ipynb)  
+[yolov8_unlabeled_data_testing.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/yolov8_unlabeled_data_testing.ipynb)
 
 ---
 
-### **Step 5: Visualization of Results**
-- Randomly selected 25 annotated images from different datasets.
+## **Step 5: Perform Data Augmentation**
+### Objective
+Augment training data to evaluate if it improves model performance.
 
-https://github.com/dgizdevans/master/blob/main/ai_project/unlabaled_images_annotation.ipynb
+### Outcome
+Augmented training dataset created and backed up for retraining.
+
+### Files
+[yolov8_augmented_model_training_and_evaluation.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/yolov8_augmented_model_training_and_evaluation.ipynb)
+
 ---
 
-### **Conclusion**
-- The YOLOv8 model demonstrates consistent performance across all test sets, with average confidence scores exceeding 0.8 and stable class distributions.
-- The results indicate the model's readiness for deployment on real-world, unlabeled data.
+## **Step 6: Augmented Model Training and Evaluation**
+### Objective
+Train a new YOLOv8 model on the augmented data and evaluate it using the same methodology.
+
+### Outcome
+The augmented model showed the following performance improvements:
+- **Confidence Improvement**:  
+  - Average Confidence increased across all test sets by approximately 2.2% to 2.3%.  
+  - Median Confidence also saw improvements of around 2.0% to 2.2%.  
+- **Reduced Variability**:  
+  - Standard Deviation decreased by 5.5% to 6.5%.  
+
+### Files
+[yolov8_augmented_model_training_and_evaluation.ipynb](https://github.com/dgizdevans/master/blob/main/ai_project/yolov8_augmented_model_training_and_evaluation.ipynb)
+
+---
+
+## **Step 7: Comparative Analysis and Conclusion**
+### Objective
+Compare the metrics from the baseline and augmented models to evaluate the impact of augmentation.
+
+### Results
+| **Metric**           | **Without Augmentation** | **With Augmentation** | **% Change** |  
+|-----------------------|--------------------------|------------------------|--------------|  
+| Average Confidence    | 0.807                   | 0.826                  | +2.3%        |  
+| Median Confidence     | 0.854                   | 0.870                  | +1.9%        |  
+| Standard Deviation    | 0.131                   | 0.124                  | -5.3%        |  
+
+### Conclusion
+- Data augmentation consistently improved average and median confidence across all test sets while reducing variability.
+- Augmentation provides a scalable strategy for improving YOLOv8 performance, especially on real-world datasets.
 
 ---
 
 ### **Next Steps**
-- Refine testing pipeline for further datasets.
-- Evaluate the model in a production environment to identify areas for improvement.
+- Investigate multiple augmentation cycles to further improve performance.
+- Deploy the augmented model in real-world applications and monitor its efficacy.
