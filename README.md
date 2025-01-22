@@ -1,6 +1,6 @@
 # Master Repository  
 
-This repository contains labs and assessments from my master's program in Data Analytics and AI at TSI/UWI universities. It will be updated with new coursework as the program progresses.  
+This repository contains labs and assessments from my master's program in **Data Analytics and AI**.
 
 ## 📂 Repository Structure  
 
@@ -9,4 +9,8 @@ This repository contains labs and assessments from my master's program in Data A
 - **[Data Mining](https://github.com/dgizdevans/master/tree/main/data-mining)** – Collection of lab exercises on data analytics using Python  
 - **[Machine Learning](https://github.com/dgizdevans/master/tree/main/ml)** – Similar to Data Mining but focused on machine learning  
 
-🚀 *This repository will continue to be updated with new coursework and projects throughout my master's program.*  
+---
+
+📚 *This work is part of my master's studies in the **Data Analytics and AI** program at **TSI**, in collaboration with **UWE Bristol**, as part of the [Double Degree Program](https://tsi.lv/study/double-degree-with-uwe-bristol/).*  
+
+🚀 *The repository will be continuously updated with new coursework and projects.*  
