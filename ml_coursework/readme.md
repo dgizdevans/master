@@ -65,4 +65,4 @@ The objective of this project is to build a binary classification model that pre
 
 ## **Related**
 
-📝 Medium article: [Where Web Analytics Meets Machine Learning: A Purchase Prediction Case Study](#) *(link to be added)*
+📝 Medium article: [Where Web Analytics Meets Machine Learning: A Purchase Prediction Case Study](https://medium.com/@dmitrijs.gizdevans/where-web-analytics-meets-machine-learning-a-purchase-prediction-case-study-44eb7c576ec1)
