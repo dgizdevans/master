@@ -1,9 +1,12 @@
 # Experiment 2 — Enriched Baselines
 
-This notebook is part of the master's thesis:
-**"Heterogeneous Graph Neural Networks for User Journey Modeling:
-A Comparative Study with Sequential and Probabilistic Approaches"**
-Transport and Telecommunication Institute (TSI), Riga, 2026.
+A double-degree master's thesis submitted to the Transport and
+Telecommunication Institute (TSI), Riga, and the University of the
+West of England (UWE Bristol), 2026.
+
+**Thesis title:**
+"Heterogeneous Graph Neural Networks for User Journey Modeling:
+A Comparative Study with Sequential and Probabilistic Approaches"
 
 **Purpose:** Evaluate whether enriching session prefix representations
 with temporal intervals, contextual features, and higher-order sequence
