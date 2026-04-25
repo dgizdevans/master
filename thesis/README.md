@@ -44,7 +44,7 @@ No data files are included in this repository.
 
 ## Experimental Progression
 
-![Macro-F1 across all models](macro_f1_all_models.png)
+![Macro-F1 across all models](macro_f1_all_models.svg)
 
 ### Experiment 0 — Sanity Check
 [`exp0_sanity_check/`](exp0_sanity_check/)
