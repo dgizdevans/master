@@ -113,6 +113,14 @@ Outperforms the best non-structural baseline (SASRec +Time) by +0.065.
 Minority class gains: Buyer +0.104, Intent +0.093.
 
 ---
+> **Note:** The graph model implemented here (HeteroGraphSAGE) is intentionally
+> minimal — a proof-of-concept architecture designed to isolate the effect of
+> heterogeneous graph structure over flat sequence encoding. No graph-specific
+> feature engineering, pre-training, or hyperparameter search beyond basic
+> configuration was applied. The +0.065 Macro-F1 gain over the best sequential
+> baseline therefore represents a lower bound on what structural graph
+> representations can achieve on this task.
+---
 
 ## Summary of Results
 
