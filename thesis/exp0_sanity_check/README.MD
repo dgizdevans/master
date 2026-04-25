@@ -1,9 +1,12 @@
 # Experiment 0 — Sanity Check (Feasibility Check)
 
-This notebook is part of the master's thesis:
-**"Heterogeneous Graph Neural Networks for User Journey Modeling:
-A Comparative Study with Sequential and Probabilistic Approaches"**
-Transport and Telecommunication Institute (TSI), Riga, 2026.
+A double-degree master's thesis submitted to the Transport and
+Telecommunication Institute (TSI), Riga, and the University of the
+West of England (UWE Bristol), 2026.
+
+**Thesis title:**
+"Heterogeneous Graph Neural Networks for User Journey Modeling:
+A Comparative Study with Sequential and Probabilistic Approaches"
 
 **Purpose:** Confirm that the GA4 dataset contains a sufficient predictive
 signal before proceeding to the main classification experiments.
