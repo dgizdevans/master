@@ -17,4 +17,6 @@ April 24, 2026, TSI, Riga, Latvia.
 
 **Author:** Dmitrijs Gizdevans
 
-**File:** `RaTSiF-2026_spring_paper.pdf`
+**Paper:** `RaTSiF-2026_spring_paper.pdf`
+
+**Conference participation certificate:** `RaTSiF-2026_certificate.pdf`
